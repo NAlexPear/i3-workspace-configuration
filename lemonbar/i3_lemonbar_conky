@@ -17,7 +17,6 @@ ${time %a %d %b %I:%M%p} \
 ${cpu} \
 ${mem} \
 ${fs_used_perc /} \
-${fs_used_perc /home} \
 ${if_up wlp2s0}${downspeedf wlp2s0} ${upspeedf wlp2s0} \
 ${else} down down ${endif}\
 ]]

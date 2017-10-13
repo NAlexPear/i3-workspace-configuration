@@ -40,7 +40,7 @@ c_white_l="#fffbf1c7"
 c_black_l="#ff253D49"
 # --- APPLY XRES END
 
-# color definitions 
+# color definitions
 
 # Dark
 color_bgdark="$c_background"
@@ -77,57 +77,11 @@ sep_right=" "                       # Powerline separator right
 sep_l_left=" "                      # Powerline light separator left
 sep_l_right=" "                     # Powerline light sepatator right
 
-# Icon glyphs from Terminusicons2
-# icon_clock="Õ"                      # Clock icon
-# icon_cpu="Ï"                        # CPU icon
-# icon_mem="Þ"                        # MEM icon
-# icon_dl="Ð"                         # Download icon
-# icon_ul="Ñ"                         # Upload icon
-# icon_vol="Ô"                        # Volume icon
-# icon_hd="À"                         # HD / icon
-# icon_home="Æ"                       # HD /home icon
-# icon_mail="Ó"                       # Mail icon
-# icon_chat="Ò"                       # IRC/Chat icon
-# icon_music="Î"                      # Music icon
-# icon_prog="Â"                       # Window icon
-# icon_contact="Á"                    # Contact icon
-# icon_wsp="Ç"                        # Workspace icon
-# icon_battery=""                    # Battery icon
-# icon_charging="+"                   # Charging icon
-
-# Icon glyphs from Siji
-# icon_clock=""                      # Clock icon
-# icon_cpu=""                        # CPU icon
-# icon_mem=""                        # MEM icon
-# icon_dl=""                         # Download icon
-# icon_ul=""                         # Upload icon
-# icon_vol=""                        # Volume icon
-# icon_mute=""
-# icon_hd="À"                         # HD / icon
-# icon_home="Æ"                       # HD /home icon
-# icon_mail="Ó"                       # Mail icon
-# icon_chat="Ò"                       # IRC/Chat icon
-# icon_music=""                      # Music icon
-# icon_music_playing=""
-# icon_music_paused=""
-# icon_prog=""                       # Window icon
-# icon_contact="Á"                    # Contact icon
-# icon_wsp=""                        # Workspace icon
-# icon_battery="         "
-# icon_charging=""
-
 # Ionicon glyphs
-icon_battery="    "
 icon_clock=""                        # Clock icon
 icon_calendar=""
 icon_cpu=""                          # CPU icon
-#icon_globe=""                        # Globe icon
 icon_home=""                         # Home icon (also linux)
-#icon_laptop=""                       # Laptop icon
-icon_linux=""                        # Linux (Tux) icon
-icon_mail=""                         # Email icon
-#icon_mem="?"                          # Memory icon
-icon_music=""                        # Music icon
 icon_paw=""                          # Paw icon
 icon_prog=""                         # Window icon
 icon_shell=""                        # Shell icon
