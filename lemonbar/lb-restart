@@ -1,4 +1,0 @@
-#!/bin/bash
-
-pkill lemonbar
-$HOME/.config/i3/lemonbar/i3_lemonbar.sh &2> /dev/null > /dev/null
