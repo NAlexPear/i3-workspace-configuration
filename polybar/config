@@ -37,7 +37,7 @@ modules-left =
 modules-center = i3
 modules-right = wlan memory cpu date
 
-tray-position = right
+tray-position =
 tray-padding = 2
 
 cursor-click = pointer
@@ -154,10 +154,10 @@ label-connected = %essid%
 format-disconnected = <label-disconnected>
 
 ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/date]
