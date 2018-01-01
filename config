@@ -121,9 +121,10 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+p move workspace to output left
 
 # gaps, perhaps?
-gaps inner 25 
+gaps inner 25
 gaps outer 0
 for_window [class="^.*"] border pixel 0
+smart_gaps on
 
 # rofi binding
 bindsym $mod+o exec "rofi -show window"
