@@ -7,7 +7,7 @@ primary = #81a2be
 secondary = #87bd68
 alert = #cc6666
 
-[bar/main]
+[bar/left]
 monitor = ${env:MONITOR:}
 monitor-fallback = ${env:MONITOR:DP-0}
 width = 100%
@@ -33,15 +33,21 @@ font-0 = FiraCode:size=12;0
 font-1 = Icons:size=11;0
 font-2 = siji:pixelsize=10;0
 
-modules-left = spotify
+modules-left =
 modules-center = i3
-modules-right = wlan volume memory cpu date
+modules-right = wlan memory cpu date
 
 tray-position = right
 tray-padding = 2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[bar/right]
+inherit = bar/left
+
+modules-left = spotify
+modules-right =
 
 [module/bspwm]
 type = internal/bspwm
@@ -56,6 +62,7 @@ label-occupied-padding = 2
 
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
+label-urgent-underline = ${colors.alert}
 label-urgent-padding = 2
 
 label-empty = %index%
@@ -89,7 +96,8 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${module/bspwm.label-urgent-background}
+label-urgent-background = ${module/bspwm.label-focused-background}
+label-urgent-underline = ${module/bspwm.label-urgent-underline}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 [module/mpd]
