@@ -49,6 +49,10 @@ inherit = bar/left
 modules-left = spotify
 modules-right =
 
+[module/spotify]
+type = custom/script
+exec = $HOME/.config/i3/polybar/modules/spotify.sh
+
 [module/bspwm]
 type = internal/bspwm
 
@@ -72,29 +76,29 @@ label-empty-padding = 2
 [module/i3]
 type = internal/i3
 format-workspaces = <label-state> <label-mode>
-index-sort = true
+index-sort = false
 wrapping-scroll = false
 label-mode-padding = 1
 label-mode-foreground = ${colors.alert}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %name%
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %name%
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %name%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %name%
 label-urgent-background = ${module/bspwm.label-focused-background}
 label-urgent-underline = ${module/bspwm.label-urgent-underline}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
