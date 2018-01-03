@@ -8,8 +8,7 @@ alt=$($config --dump=foreground-alt left)
 elapsed="0"
 cache=""
 
-while :
-do
+while [[ $(ps -u $USER | grep spotify) ]]; do
   title=`exec playerctl metadata xesam:title`
   artist=`exec playerctl metadata xesam:artist`
   album=`exec playerctl metadata xesam:album`
@@ -43,3 +42,5 @@ do
 
   sleep 1
 done
+
+echo ""

@@ -52,6 +52,7 @@ modules-right =
 [module/spotify]
 type = custom/script
 exec = $HOME/.config/i3/polybar/modules/spotify.sh
+exec-if = ps -u $USER | grep spotify
 label = %output%
 format = <label>
 click-left = playerctl --player=spotify play-pause
