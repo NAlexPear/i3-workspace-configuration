@@ -27,9 +27,6 @@ line-color = #f00
 border-size = 9
 border-color = #00000000
 
-padding-left = 0
-padding-right = 3
-
 module-margin-left = 1
 module-margin-right = 2
 
@@ -51,8 +48,6 @@ inherit = bar/left
 
 modules-left = spotify
 modules-right =
-
-padding-left = 3
 
 [module/spotify]
 type = custom/script
