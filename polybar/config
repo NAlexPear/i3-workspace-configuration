@@ -2,12 +2,16 @@
 background = #00ffffff
 background-alt = #26444445
 foreground = #B31d1f21
-foreground-alt = #000000
+foreground-alt = #591d1f21
 primary = #81a2be
 secondary = #87bd68
 alert = #cc6666
 
 [bar/left]
+primary = ${colors.primary}
+secondary = ${colors.secondary}
+foreground-alt = ${colors.foreground-alt}
+
 monitor = ${env:MONITOR:}
 monitor-fallback = ${env:MONITOR:DP-0}
 width = 100%
@@ -32,12 +36,13 @@ module-margin-right = 2
 font-0 = FiraSans:size=13;0
 font-1 = MaterialIcons:size=13;1
 font-2 = WuconSiji:pixelsize=10;0
+font-3 = BitstreamCharter:size=13;0
 
 modules-left =
 modules-center = i3
 modules-right = wlan memory cpu date
 
-tray-position = 
+tray-position =
 tray-padding = 2
 
 cursor-click = pointer
@@ -49,9 +54,16 @@ inherit = bar/left
 modules-left = spotify
 modules-right =
 
+padding-left = 3
+
 [module/spotify]
 type = custom/script
 exec = $HOME/.config/i3/polybar/modules/spotify.sh
+label = %output%
+format = <label>
+click-left = playerctl --player=spotify play-pause
+tail = true
+interval = 0
 
 [module/bspwm]
 type = internal/bspwm
@@ -113,7 +125,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = 
+format-prefix = 
 format-prefix-foreground = ${colors.primary}
 format-prefix-padding-right = 1
 label = %percentage_used%%
@@ -129,17 +141,9 @@ format-connected-prefix-foreground = ${colors.secondary}
 format-connected-prefix-padding-right = 1
 format-connected-prefix-margin-top = -2
 format-connected = <label-connected>
-format-disconnected-prefix = 
+format-disconnected-prefix = 
 format-disconnected-prefix-foreground = ${colors.alert}
 format-disconnected = <label-disconnected>
-
-ramp-signal = 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
@@ -152,7 +156,7 @@ time = "%I:%M %p"
 time-alt = %H:%M:%S
 
 format-prefix = 
-format-prefix-foreground = ${colors.foreground}
+format-prefix-foreground = ${colors.foreground-alt}
 label = %date% %time%
 
 [module/temperature]
