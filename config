@@ -29,6 +29,9 @@ font pango:monospace 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# play/pause Spotify
+bindsym $mod+space exec playerctl --player=spotify play-pause
+
 # start a terminal
 bindsym $mod+Return exec kitty
 
@@ -48,6 +51,7 @@ bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
+
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -85,7 +89,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
