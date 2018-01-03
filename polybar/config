@@ -4,7 +4,7 @@ background-alt = #26444445
 foreground = #B31d1f21
 foreground-alt = #591d1f21
 primary = #81a2be
-secondary = #87bd68
+secondary = #B3518965
 alert = #cc6666
 
 [bar/left]
@@ -33,17 +33,15 @@ padding-right = 3
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = FiraSans:size=13;0
+font-0 = DroidSansMonoForPowerline:size=11;0
 font-1 = MaterialIcons:size=13;1
 font-2 = WuconSiji:pixelsize=10;0
-font-3 = BitstreamCharter:size=13;0
 
 modules-left =
 modules-center = i3
 modules-right = wlan memory cpu date
 
 tray-position =
-tray-padding = 2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -64,61 +62,39 @@ format = <label>
 click-left = playerctl --player=spotify play-pause
 tail = true
 
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-background = ${colors.background}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-underline = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
-
 [module/i3]
 type = internal/i3
 format-workspaces = <label-state> <label-mode>
-index-sort = false
+index-sort = true
 wrapping-scroll = false
 label-mode-padding = 1
 label-mode-foreground = ${colors.alert}
 
 ; focused = Active workspace on focused monitor
-label-focused = %name%
-label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
+label-focused = 
+label-focused-padding = 2
+label-focused-foreground = ${colors.secondary}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %name%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+label-unfocused = 
+label-unfocused-padding = 2
+label-unfocused-foreground = ${colors.foreground-alt}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %name%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
+label-visible = 
+label-visible-padding = 2
+label-visible-foreground = ${colors.primary}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %name%
-label-urgent-background = ${module/bspwm.label-focused-background}
-label-urgent-underline = ${module/bspwm.label-urgent-underline}
-label-urgent-padding = ${module/bspwm.label-urgent-padding}
+label-urgent = 
+label-urgent-padding = 2 
+label-urgent-foreground = ${colors.alert}
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 format-prefix = 
-format-prefix-foreground = ${colors.alert}
+format-prefix-foreground = ${colors.primary}
 label = %percentage:2%%
 
 [module/memory]
@@ -136,7 +112,7 @@ interval = 3.0
 
 label-connected = %essid%
 format-connected-prefix = 
-format-connected-prefix-foreground = ${colors.secondary}
+format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected-prefix-padding-right = 1
 format-connected-prefix-margin-top = -2
 format-connected = <label-connected>
