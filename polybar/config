@@ -63,7 +63,6 @@ label = %output%
 format = <label>
 click-left = playerctl --player=spotify play-pause
 tail = true
-interval = 0
 
 [module/bspwm]
 type = internal/bspwm
