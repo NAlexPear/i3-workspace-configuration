@@ -35,6 +35,9 @@ bindsym $mod+space exec playerctl --player=spotify play-pause
 # start a terminal
 bindsym $mod+Return exec kitty
 
+# start an editor
+bindsym $mod+c exec code-insiders && sleep 3 && transset-df --id 0x1200001 --dec 0.1
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
