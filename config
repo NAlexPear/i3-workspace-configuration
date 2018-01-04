@@ -32,6 +32,9 @@ floating_modifier $mod
 # play/pause Spotify
 bindsym $mod+space exec playerctl --player=spotify play-pause
 
+# take a big screenshot
+bindsym $mod+Shift+s exec scrot -m -e 'mv $f ~/Pictures/Screenshots'
+
 # start a terminal
 bindsym $mod+Return exec kitty
 
