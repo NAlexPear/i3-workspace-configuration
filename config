@@ -39,7 +39,7 @@ bindsym $mod+Shift+s exec scrot -m -e 'mv $f ~/Pictures/Screenshots'
 bindsym $mod+Return exec kitty
 
 # start a vim-ready editor
-bindsym $mod+c exec kitty --config ~/.config/kitty/vim.conf 
+bindsym $mod+c exec kitty --config ~/.config/kitty/vim.conf
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -94,14 +94,8 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
-
 # focus the parent container
 bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -116,7 +110,6 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
@@ -127,8 +120,17 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-# move workspace to output left
-bindsym $mod+Shift+p move workspace to output left
+# workspace/monitor setup
+workspace "1: vim" output left
+workspace 2 output DP-2
+workspace 3 output DP-2
+workspace 4 output DP-2
+workspace 5 output DP-2
+workspace 6 output DP-2
+workspace 7 output DP-2
+workspace 8 output DP-2
+workspace 9 output DP-2
+workspace 10 output DP-2
 
 # gaps, perhaps?
 gaps inner 25
