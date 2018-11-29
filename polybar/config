@@ -30,13 +30,11 @@ border-color = #00000000
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = DroidSansMonoForPowerline:size=11;0
+font-0 = Iosevka:size=12;0
 font-1 = MaterialIcons:size=13;2
 font-2 = WuconSiji:pixelsize=10;0
 
-modules-left =
 modules-center = i3
-modules-right = wlan memory cpu date
 
 tray-position =
 
@@ -47,7 +45,7 @@ cursor-scroll = ns-resize
 inherit = bar/left
 
 modules-left = spotify
-modules-right =
+modules-right = wlan date
 
 [module/spotify]
 type = custom/script
@@ -151,13 +149,3 @@ ramp-foreground = ${colors.foreground-alt}
 
 [settings]
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-
-[global/wm]
-margin-top = 5
-margin-bottom = 5
-
-; vim:ft=dosini
